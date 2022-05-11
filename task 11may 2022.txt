@@ -1,0 +1,27 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		
+		int counter = 0;
+		int[] arr1 = {211, 9, -6, 12, 34, 56, 32, 5, 19};
+		int[] arr2 = {5, 211, 7};
+		foreach (int j in arr2)
+			foreach (int i in arr1)
+				if (i == j)
+				{
+                    counter++;
+				}
+
+		if (counter == arr2.Length)
+		{
+			Console.WriteLine(true);
+		}
+		else
+		{
+			Console.WriteLine(false);
+		}
+	}
+}
