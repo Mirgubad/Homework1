@@ -1,0 +1,23 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int[] ages = {25, 26, 27, 28};
+		bool result = false;
+		Console.WriteLine("Zehmet olmasa Yashinizi qeyd edin: ");
+		string userAge = Console.ReadLine();
+		int age = int.Parse(userAge);
+		foreach (int i in ages)
+		{
+			if (age == i)
+			{
+				result = true;
+				break;
+			}
+		}
+
+		Console.WriteLine(result);
+	}
+}
