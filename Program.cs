@@ -1,47 +1,53 @@
 ﻿using System;
-
-namespace ConsoleApp9
+namespace ConsoleApp7
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            IsPrime(13);
 
-            Console.ReadLine();
+            int[] arr = { 100, 200, 300, 200 };
+
+
+            if (CalcAvg(arr) > 60)
+            {
+                Console.WriteLine("Siz mezun oldunuz");
+            }
+            else
+            {
+                Console.WriteLine("siz mezun olmadiniz");
+            }
         }
 
-
-
-        static void IsPrime(int n)
+        static int CalcAvg(int[] arr)
         {
-
-            int i = 0;
-            int m = 0;
+            int avg = 0;
+            int sum = 0;
             int counter = 0;
 
+            foreach (int i in arr)
 
-
-            m = n / 2;
-            for (i = 2; i <= m; i++)
             {
-                if (n % i == 0)
-                {
-                    Console.WriteLine("False");
-                    counter++;
-                    break;
-                }
+                sum += i;
+                counter++;
             }
-            if (counter == 0)
-                Console.WriteLine("True");
+            avg = sum / counter;
+
+            return avg;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
     }
-
-
-
 }
-
-
-
-
