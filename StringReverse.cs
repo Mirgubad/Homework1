@@ -2,7 +2,7 @@
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             System.Console.WriteLine(StringReverse("Nurlan Faiq Emil Tural Yusif"));
 
@@ -12,13 +12,20 @@
         {
             string revname = "";
 
-            for (int i = name.Length - 1; i >= 0; i--)
+            string[] words = name.Split();
+            foreach (var j in words)
             {
-                revname += name[i];
+                for (int i = j.Length - 1; i >= 0; i--)
+
+                {
+
+                    revname += j[i];
+
+                }
+                revname += " ";
+
             }
             return revname;
-
-        }
 
 
 
