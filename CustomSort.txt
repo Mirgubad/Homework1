@@ -1,0 +1,37 @@
+﻿namespace ArraySort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = { 8, 9, 5, 4, 3, 2, 1 };
+
+            SortArray(arr);
+        }
+
+        static int[] SortArray(int[] arr)
+        {
+            int[] arr1 = new int[arr.Length];
+
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] < arr[i + 1])
+                {
+                    arr1[i] = arr[i];
+                    int temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                    i = -1;
+
+                }
+            }
+            return arr[];
+
+
+        }
+
+
+
+
+    }
+}
